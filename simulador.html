@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleplay - Ferring University</title>
+    <link href="./src/css/app.css" rel="stylesheet">
+</head>
+<body class="bg-[#0068a6] min-h-screen font-sans text-gray-800">
+    <!-- Header -->
+    <header class="text-white shadow-md">
+        <div class="w-[80%] mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="p-2 rounded block h-12 w-32 flex items-center justify-center text-ferring font-black text-xs">
+                    <img src="img/UF_blanco.png" alt="Logo ferring" srcset="">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wider">FERRING UNIVERSITY</h1>
+                    <p class="text-xs text-blue-100 uppercase tracking-widest">Medical Affairs Training</p>
+                </div>
+            </div>
+            <div class="text-sm font-medium bg-ferring-dark px-4 py-2 rounded-full">
+                Simulador de Ventas IA (Rekovelle + Merapur)
+            </div>
+        </div>
+    </header>
+
+    <!-- Todo el contenido -->
+    <main class="w-[80%] mx-auto mt-10 mb-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 lg:col-span-1 flex flex-col items-center text-center">
+            
+            <div class="w-32 h-32 bg-ferring-light rounded-full mb-4 flex items-center justify-center border-4 border-ferring">
+                <img src="img/doctora1.png" alt="" srcset="">
+            </div>
+            
+            <h2 class="text-2xl font-bold text-gray-800">Dra. Adriana</h2>
+            <p class="text-sm text-ferring font-semibold uppercase tracking-wide mb-2">Especialista (CDMX)</p>
+            <p class="text-sm text-gray-500 mb-8 px-4">Evaluación de eficacia clínica y costos en tratamientos especializados.</p>
+
+            <button id="btn-hablar" class="btn-inicio bg-green-300 hover:bg-green-500 text-black font-bold py-4 px-8 rounded-full w-full transition-all shadow-md cursor-pointer flex justify-center items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+                <span id="texto_btn-hablar">Presiona para iniciar</span>
+            </button>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 lg:col-span-2 flex flex-col">
+            <h3 class="text-lg font-bold text-gray-800 border-b pb-3 mb-6">Registro de la Visita Médica</h3>
+            
+            <div class="flex-1 space-y-6 overflow-y-auto max-h-[500px] pr-2">
+                <div class="bg-gray-50 border-l-4 border-emerald-500 p-4 rounded-r-lg">
+                    <p class="text-xs text-emerald-600 font-bold uppercase mb-1">Representante (Tú):</p>
+                    <p id="texto-usuario" class="text-gray-700 italic">Esperando a que inicies la conversación...</p>
+                </div>
+
+                <div class="bg-ferring-light border-l-4 border-ferring p-4 rounded-r-lg">
+                    <p class="text-xs text-ferring-dark font-bold uppercase mb-1">Dra. Adriana:</p>
+                    <p id="texto-bot" class="text-gray-800 font-medium">...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="src/js/app.js"></script>
+</body>
+</html>
